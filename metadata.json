@@ -1,0 +1,7 @@
+{
+  "name": "የቤንሻንጉል ጉምዝ ፖሊስ መታወቂያ ሲስተም - BGR Police ID System",
+  "description": "የቤንሻንጉል ጉምዝ ክልል ፖሊስ ኮሚሽን አባላት መታወቂያ ማውጫ እና ማረጋገጫ ሲስተም",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

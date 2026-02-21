@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer base {
+  @media print {
+    @page {
+      margin: 0.5cm;
+      size: auto;
+    }
+    
+    body {
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+      background: white !important;
+    }
+
+    .print\:hidden {
+      display: none !important;
+    }
+
+    /* Ensure no clipping */
+    * {
+      overflow: visible !important;
+    }
+
+    /* Hide everything except the ID card when printing from verification */
+    .no-print-verify {
+      display: none !important;
+    }
+  }
+}
+
+/* Screenshot deterrence (limited effectiveness) */
+.no-screenshot {
+  filter: none;
+  transition: filter 0.3s;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Some mobile browsers might respect this for sensitive content */
+  .no-screenshot {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+}
